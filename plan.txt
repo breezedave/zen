@@ -1,0 +1,2 @@
+Anim lives in body
+.page-wrapper contains all pop ups
