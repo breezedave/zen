@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewbox="0 0 32 32" width="32" height="32">
+    <defs>
+        <g id="coinbox">
+            <g id="outside">
+                <path d="
+                    M2 2
+                    l28 0
+                    l 0 28
+                    l -28 0
+                    l 0 -28
+                    z" stroke="none" fill="#fc9838"/>
+                <path d="m31 2 l0 30" stroke="#000" fill="none" stroke-width="2"/>
+                <path d="m2 1 l28 0" stroke="#c84c0c" fill="none" stroke-width="2"/>
+                <path d="m1 2 l0 30" stroke="#c84c0c" fill="none" stroke-width="2"/>
+                <path d="m0 31 l32 0" stroke="#000" fill="none" stroke-width="2"/>
+            </g>
+            <g id="coner bolts">
+                <path d="m4 5 l2 0" stroke="#000" fill="none" stroke-width="2"/>
+                <path d="m26 5 l2 0" stroke="#000" fill="none" stroke-width="2"/>
+                <path d="m4 27 l2 0" stroke="#000" fill="none" stroke-width="2"/>
+                <path d="m26 27 l2 0" stroke="#000" fill="none" stroke-width="2"/>
+            </g>
+
+            <g id="exclamShadow">
+                <path d="
+                    m15 8
+                    l3 0
+                    l0 1
+                    l0.5 0
+                    l0 8
+                    l-0.5 0
+                    l0 4
+                    l-0.5 0
+                    l0 0.5
+                    l-2 0
+                    l0 -0.5
+                    l-0.5 0
+                    l0 -4
+                    l-0.5 0
+                    l0 -8
+                    l0.5 0
+                    z" stroke="none" fill="#000"/>
+
+                <path d="
+                    m15.5 23.5
+                    l2 0
+                    l0 0.5
+                    l0.5 0
+                    l0 2
+                    l-0.5 0
+                    l0 0.5
+                    l-2 0
+                    l0 -0.5
+                    l-0.5 0
+                    l0 -2
+                    l0.5 0
+                    z" stroke="none" fill="#000"/>
+            </g>
+
+            <g id="exclam">
+                <path d="
+                    m14 7
+                    l3 0
+                    l0 1
+                    l0.5 0
+                    l0 8
+                    l-0.5 0
+                    l0 4
+                    l-0.5 0
+                    l0 0.5
+                    l-2 0
+                    l0 -0.5
+                    l-0.5 0
+                    l0 -4
+                    l-0.5 0
+                    l0 -8
+                    l0.5 0
+                    z" stroke="none" fill="#c84c0c"/>
+
+                <path d="
+                    m14.5 22.5
+                    l2 0
+                    l0 0.5
+                    l0.5 0
+                    l0 2
+                    l-0.5 0
+                    l0 0.5
+                    l-2 0
+                    l0 -0.5
+                    l-0.5 0
+                    l0 -2
+                    l0.5 0
+                    z" stroke="none" fill="#c84c0c"/>
+            </g>
+
+        </g>
+    </defs>
+    <use xlink:href="#coinbox" x="0" y="0"/>
+</svg>
