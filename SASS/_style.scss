@@ -1,3 +1,5 @@
+$startAt: -13s;
+
 body {
     * {
         display: none;
@@ -21,6 +23,10 @@ body {
             animation-play-state: paused;
         }
 
+        &:active:after {
+            animation-play-state: paused;
+        }
+
         &:before {
             content:'';
             position: absolute;
@@ -31,29 +37,110 @@ body {
             left: 50%;
             transform: translate(-50%, -50%);
             background: transparent $bg no-repeat;
-            animation-duration: 120s;
+            animation-delay: $startAt;
+            animation-duration: 100s;
             animation-name: pan;
             animation-iteration-count: infinite;
             animation-timing-function: linear;
             border: 6px solid #666;
+        }
+    }
+
+    .extra1 {
+        display: block;
+        position: absolute;
+        left: 0;
+        top:0;
+        width: 32px;
+        height: 32px;
+        top: 50%;
+        left: 50%;
+        animation-duration: 100s;
+        animation-delay: $startAt;
+        animation-name: marioAction;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        transform: translate(-50%, -50%) translate(-16px, 138px);
+
+        &:before {
+            content:'';
+            position: absolute;
+            overflow: hidden;
+            width: 32px;
+            height: 32px;
+            background: transparent $mStandRight no-repeat;
+            background-size: 200%;
+            animation-delay: $startAt;
+            animation-duration: 0.5s;
+            animation-name: marioRunRight;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
         }
 
         &:after {
             content:'';
             position: absolute;
             overflow: hidden;
-            width: 32px;
-            height: 32px;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) translate(0, 138px);
-            background: transparent $mSkidLeft no-repeat;
+            width: 0;
+            height: 0;
+            background: transparent $mJumpRight no-repeat;
             background-size: 200%;
-            animation-iteration-count: infinite;
-            animation-timing-function: linear;
         }
 
     }
+
+    $floor: translate(-50%, -50%) translate(-16px, 138px);
+    $lowerBrickHit: translate(-50%, -50%) translate(-16px, 68px);
+    $jumpHeight : translate(-50%, -50%) translate(-16px, 38px);
+    $bigJumpHeight : translate(-50%, -50%) translate(-16px, 2px);
+    $onSmallPipe : translate(-50%, -50%) translate(-16px, 74px);
+    $onMediumPipe : translate(-50%, -50%) translate(-16px, 42px);
+    $onBigPipe : translate(-50%, -50%) translate(-16px, 10px);
+
+
+    @keyframes marioAction {
+        0% { transform: $floor }
+        2.75% { transform: $floor }         3.25% { transform: $lowerBrickHit }    3.75% { transform: $floor }
+        6.2% { transform: $floor }          6.7% { transform: $jumpHeight }        6.88% { transform: $onSmallPipe }
+        8.25% { transform: $onSmallPipe }   8.57% { transform: $floor }
+        11.55% { transform: $floor }        12.25% { transform: $bigJumpHeight }   12.52% { transform: $onMediumPipe }
+        13.62% { transform: $onMediumPipe } 14.1% { transform: $floor }
+        16% { transform: $floor }           16.7% { transform: $bigJumpHeight }    16.73% { transform: $onBigPipe }
+        18.1% { transform: $onBigPipe }     18.71% { transform: $floor }
+
+        22% { transform: $floor }        22.7% { transform: $bigJumpHeight }    22.73% { transform: $onBigPipe }
+        24.1% { transform: $onBigPipe }    24.71% { transform: $floor }
+
+
+
+//        22% { transform: $floor }       22.5% { transform: $bigJumpHeight }     23% { transform: $floor }
+//        28.75% { transform: $floor }    29.25% { transform: $bigJumpHeight }    29.75% { transform: $floor }
+//        32.5% { transform: $floor }     33% { transform: $bigJumpHeight }       33.5% { transform: $floor }
+
+//        41.5% { transform: $floor }     42% { transform: $bigJumpHeight }       42.5% { transform: $floor }
+//        89% { transform: $floor }       89.5% { transform: $bigJumpHeight }     90% { transform: $floor }
+//        91.75% { transform: $floor }    92.25% { transform: $bigJumpHeight }    92.75% { transform: $floor }
+//        94% { transform: $floor }       94.5% { transform: $bigJumpHeight }     95% { transform: $floor }
+
+
+
+    }
+
+    @keyframes marioRunRight {
+        0% {
+            background-image: $mWalkRight1;
+        }
+        33% {
+            background-image: $mWalkRight2;
+        }
+        67% {
+            background-image: $mWalkRight3;
+        }
+        100% {
+            background-image: $mWalkRight1;
+        }
+    }
+
 
     @keyframes pan {
         from {
