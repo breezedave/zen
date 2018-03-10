@@ -1,3 +1,14 @@
+body:before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: white;
+  font-size: 18px;
+  font-family: verdana;
+  z-index: 4;
+  content: "TODO: Fix Mobile";
+}
+
 footer {
   display: block;
   position: absolute;
