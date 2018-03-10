@@ -88,6 +88,192 @@ footer:before {
   animation-name: infoBox4;
 }
 
+.sidebar {
+  top: 50%;
+  position: absolute;
+  right: 50%;
+  transform: translate(250px, -150px);
+}
+
+.sidebar h3 {
+  width: 160px;
+  position: absolute;
+  font-size: 20px;
+  margin: 0 20px;
+  text-align: center;
+  z-index: 10;
+  border: 2px solid grey;
+  border-radius: 5px;
+  font-family: arial;
+  background-color: white;
+  top: -27px;
+  padding: 10px 0;
+}
+
+.sidebar nav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 5;
+  width: 200px;
+  height: 200px;
+}
+
+.sidebar nav ul {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  animation: rotate 10s infinite;
+  animation-timing-function: linear;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  display: block;
+  position: absolute;
+  width: 60px;
+  height: 32px;
+  text-align: center;
+  color: #666;
+  font-size: 8px;
+  margin: 0;
+  padding: 0;
+  border-radius: 5px;
+  border: 2px solid #666;
+  background-color: #AAA;
+}
+
+.sidebar nav ul li a {
+  font-size: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.sidebar nav ul li .designer-name {
+  display: none;
+}
+
+.sidebar nav ul li:nth-child(1) {
+  transform: translateX(68px) rotateY(0deg) translateZ(100px);
+}
+
+.sidebar nav ul li:nth-child(1):before {
+  content: "221";
+  position: absolute;
+  font-size: 28px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: translateX(-45%);
+}
+
+.sidebar nav ul li:nth-child(2) {
+  transform: translateX(68px) rotateY(45deg) translateZ(100px);
+}
+
+.sidebar nav ul li:nth-child(2):before {
+  content: "220";
+  position: absolute;
+  font-size: 28px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: translateX(-45%);
+}
+
+.sidebar nav ul li:nth-child(3) {
+  transform: translateX(68px) rotateY(90deg) translateZ(100px);
+}
+
+.sidebar nav ul li:nth-child(3):before {
+  content: "219";
+  position: absolute;
+  font-size: 28px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: translateX(-45%);
+}
+
+.sidebar nav ul li:nth-child(4) {
+  transform: translateX(68px) rotateY(135deg) translateZ(100px);
+}
+
+.sidebar nav ul li:nth-child(4):before {
+  content: "218";
+  position: absolute;
+  font-size: 28px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: translateX(-45%);
+}
+
+.sidebar nav ul li:nth-child(5) {
+  transform: translateX(68px) rotateY(180deg) translateZ(100px);
+}
+
+.sidebar nav ul li:nth-child(5):before {
+  content: "217";
+  position: absolute;
+  font-size: 28px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: translateX(-45%);
+}
+
+.sidebar nav ul li:nth-child(6) {
+  transform: translateX(68px) rotateY(225deg) translateZ(100px);
+}
+
+.sidebar nav ul li:nth-child(6):before {
+  content: "216";
+  position: absolute;
+  font-size: 28px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: translateX(-45%);
+}
+
+.sidebar nav ul li:nth-child(7) {
+  transform: translateX(68px) rotateY(270deg) translateZ(100px);
+}
+
+.sidebar nav ul li:nth-child(7):before {
+  content: "215";
+  position: absolute;
+  font-size: 28px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: translateX(-45%);
+}
+
+.sidebar nav ul li:nth-child(8) {
+  transform: translateX(68px) rotateY(315deg) translateZ(100px);
+}
+
+.sidebar nav ul li:nth-child(8):before {
+  content: "214";
+  position: absolute;
+  font-size: 28px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: translateX(-45%);
+}
+
 .extra1 {
   display: block;
   position: absolute;
@@ -166,6 +352,15 @@ footer:before {
 
 .extra5 {
   animation-name: coinBox4;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateX(-15deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(-15deg) rotateY(360deg);
+  }
 }
 
 @keyframes marioAction {
