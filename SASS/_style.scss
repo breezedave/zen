@@ -1,0 +1,71 @@
+body {
+    * {
+        display: none;
+    }
+
+    .page-wrapper,
+    #zen-supporting {
+        display: block;
+    }
+
+    footer {
+        display: block;
+        position: absolute;
+        left: 0;
+        top:0;
+        width:100%;
+        height:100%;
+        background: #333;
+
+        &:active:before {
+            animation-play-state: paused;
+        }
+
+        &:before {
+            content:'';
+            position: absolute;
+            overflow: hidden;
+            width: 960px;
+            height: 400px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: transparent $bg no-repeat;
+            animation-duration: 120s;
+            animation-name: pan;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            border: 6px solid #666;
+        }
+
+        &:after {
+            content:'';
+            position: absolute;
+            overflow: hidden;
+            width: 32px;
+            height: 32px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) translate(0, 138px);
+            background: transparent $mSkidLeft no-repeat;
+            background-size: 200%;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+    }
+
+    @keyframes pan {
+        from {
+            background-position-x: 0px;
+        }
+        to {
+            background-position-x: -5802px;
+        }
+    }
+
+    svg {
+        opacity: 0.2;
+    }
+
+}
